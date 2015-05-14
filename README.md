@@ -5,8 +5,7 @@ HourGlass
 
 HourGlass lets you track the time you spend physically at a location.
 
-Application Workflow (Version 0)
---------------------------------
+####Application Workflow (Version 0)
 
 ######Authenticated User
 - Logs in
