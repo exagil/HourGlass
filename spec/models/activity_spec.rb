@@ -25,7 +25,8 @@ RSpec.describe Activity, type: :model do
 		expect(activity.hours_spent).to be_instance_of(Float)
 	end
 
-	xit "expects hours_spent method to return the difference between end_time and start_time" do 
+	it "expects hours_spent method to return the difference between end_time and start_time" do 
+		expect(activity.hours_spent).to be > 24
 	end
 
 	it "responds to friendly_created_at" do 

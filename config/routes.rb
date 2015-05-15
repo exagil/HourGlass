@@ -1,3 +1,3 @@
 Rails.application.routes.draw do
-  resources :activities, only: :index
+  resources :activities, only: [:index, :new]
 end

@@ -4,9 +4,9 @@ describe "The Activity View", type: :feature do
 
 	let(:activity){ Activity.create(start_time: DateTime.new, end_time: DateTime.now+1.day) }
 
-	before(:each){ visit activities_path }
 
-	context "index page" do 
+	context "new page" do 
+		before(:each){ visit new_activity_path }
 
 		it "shows today's date" do 
 			date = Date.today.strftime('%A, %d %B, %Y')
