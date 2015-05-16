@@ -1,0 +1,12 @@
+<div class="time_form">
+		
+	<div class="quote-banner">
+		<h4>At what time did you come today?</h4>
+	</div>
+
+	<%= form_for(@todays_activity, html: {class: 'todays_time'}, remote: true) do |f| %>
+		<%= f.text_field :start_time %>
+		<%= f.submit "Start" %>
+	<% end %>
+
+</div>

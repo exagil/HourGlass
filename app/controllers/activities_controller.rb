@@ -11,6 +11,12 @@ class ActivitiesController < ApplicationController
 	end
 
 	def update
+		@todays_activity = current_user.todays_activity
+		@todays_activity.update(params_activity)
+		respond_to do |format|
+			format.html {redirect_to welcome_path}
+			format.js
+		end
 	end
 
 	private

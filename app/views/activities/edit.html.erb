@@ -1,10 +1,11 @@
 <div class="activities">
-	<h1><%= Date.today.strftime('%A, %d %B, %Y') %></h1>
+	<h1><%= @todays_activity.created_at.strftime('%A, %d %B, %Y') %></h1>
 </div>
-<div class="quote-banner">
-	<h4>At what time did you come today?</h4>
-</div>
-<%= form_for(@todays_activity, html: {class: 'todays_time'}, remote: true) do |f| %>
-	<%= f.text_field :start_time %>
-	<%= f.submit "Start" %>
+
+<% if @todays_activity.start_time == nil %>
+	<%= render partial: 'activities/start_form' %>
+<% elsif @todays_activity.end_time == nil %>
+	<%= render partial: 'activities/end_form' %>
+<% else %>
+  <%= render partial: 'activities/result' %>
 <% end %>

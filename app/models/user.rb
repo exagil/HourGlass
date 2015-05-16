@@ -6,6 +6,6 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   def todays_activity
-  	 current_user.activities.find_or_create_by(created_at: Date.today.to_datetime)
+  	activities.find_or_create_by(created_at: Date.today.to_datetime)
   end
 end

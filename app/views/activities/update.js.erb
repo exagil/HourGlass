@@ -1,0 +1,26 @@
+console.log("Loaded Update.js.erb");
+<% if @todays_activity.start_time == nil %>
+  $('.time_form').replaceWith("<%= escape_javascript(render partial: 'activities/sart_form') %>");
+  $('.time_form').replaceWith("<%= escape_javascript(render partial: 'activities/end_form') %>");
+  $('#activity_start_time, #activity_end_time').timepicker({
+		'minTime': "07:00AM",
+		'maxTime': '11:00PM',
+		'scrollDefault': 'now',
+		'forceRoundTime': true,
+		'timeFormat': 'h:i:A',
+		'step': 15
+	});
+<% elsif @todays_activity.end_time == nil %>
+  $('.time_form').replaceWith("<%= escape_javascript(render partial: 'activities/end_form') %>");
+  $('#activity_start_time, #activity_end_time').timepicker({
+		'minTime': "<%= escape_javascript(@todays_activity.start_time.to_s) %>",
+		'maxTime': '11:00PM',
+		'scrollDefault': 'now',
+		'forceRoundTime': true,
+		'timeFormat': 'h:i:A',
+		'step': 15
+	});
+	$('#activity_start_time, #activity_end_time').timepicker('setTime', new Date());
+<% else %>
+  $('.time_form').replaceWith("<%= escape_javascript(render partial: 'activities/result') %>");
+<% end %>
