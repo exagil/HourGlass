@@ -1,20 +1,24 @@
 class ActivitiesController < ApplicationController
-	before_action :redirect_to_root_if_not_logged_in
+	before_filter :redirect_to_root_if_not_logged_in
+	before_action :set_todays_activity
 
 	def index
 		@activities = Activity.all
 	end
 
-	def new
-		@todays_activity = Activity.new
+	def edit
+		
 	end
 
-	def create
-		fail
+	def update
 	end
 
 	private
-	def params_activity
-		params.require(:activity).permit(:start_time, :end_time)
-	end
+		def params_activity
+			params.require(:activity).permit(:start_time, :end_time)
+		end
+
+		def set_todays_activity
+			@todays_activity = current_user.todays_activity
+		end
 end

@@ -4,4 +4,8 @@ class User < ActiveRecord::Base
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
+
+  def todays_activity
+  	 current_user.activities.find_or_create_by(created_at: Date.today.to_datetime)
+  end
 end
