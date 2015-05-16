@@ -1,3 +1,7 @@
 <div class="activities">
 	<h1><%= Date.today.strftime('%A, %d %B, %Y') %></h1>
 </div>
+<%= form_for(@todays_activity, html: {class: 'todays_time'}) do |f| %>
+	<%= f.text_field :start_time %>
+	<%= f.submit "Start" %>
+<% end %>
