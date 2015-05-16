@@ -1,0 +1,20 @@
+<table class='activities_history'>
+	<tr>
+		<th>S.No.</th>
+		<th>Date</th>
+		<th>Start Time</th>
+		<th>End Time</th>
+		<th>Total Time Spent</th>
+	</tr>
+<% index = 1 %>
+<% @activities.each do |activity| %>
+	<tr>
+		<td><%= index %></td>
+		<td><%= activity.created_at.strftime('%d %h %Y') %></td>
+		<td><%= activity.start_time.strftime('%I:%M %p') %></td>
+		<td><%= activity.end_time.strftime('%I:%M %p') %></td>
+		<td><%= activity.total_time_spent_in_words %></td>
+	</tr>
+	<% index += 1 %>
+<% end %>
+</table>

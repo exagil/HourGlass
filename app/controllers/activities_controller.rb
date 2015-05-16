@@ -4,7 +4,7 @@ class ActivitiesController < ApplicationController
 	before_action :set_todays_activity
 
 	def index
-		@activities = Activity.all
+		@activities = current_user.activities.all
 	end
 
 	def edit
