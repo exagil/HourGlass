@@ -1,7 +1,6 @@
 console.log("Loaded Update.js.erb");
 <% if @todays_activity.start_time == nil %>
-  $('.time_form').replaceWith("<%= escape_javascript(render partial: 'activities/sart_form') %>");
-  $('.time_form').replaceWith("<%= escape_javascript(render partial: 'activities/end_form') %>");
+  $('.time_form').replaceWith("<%= escape_javascript(render partial: 'activities/start_form') %>");
   $('#activity_start_time, #activity_end_time').timepicker({
 		'minTime': "07:00AM",
 		'maxTime': '11:00PM',

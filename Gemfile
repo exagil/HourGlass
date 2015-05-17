@@ -31,6 +31,7 @@ gem 'bootstrap-sass'
 # Use Unicorn as the app server
 gem 'unicorn'
 gem 'devise'
+gem 'font-awesome-sass'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
