@@ -1,0 +1,16 @@
+<table class='activities_history'>
+	<% index = 1 %>
+	<th>S.No</th>
+	<th>Email</th>
+	<th>Show History</th>
+	<th>Delete</th>
+	<% @users.each do |user| %>
+		<tr>
+			<td><%= index %></td>
+			<td><%= user.email %></td>
+			<td><%= link_to "Show History", activities_path(user: user) %></td>
+			<td><%= link_to "Delete", user_path(user), method: :delete, data: {confirm: "Are you sure?"} %></td>
+		</tr>
+		<% index += 1 %>
+	<% end %>
+</table>

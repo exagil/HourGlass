@@ -1,6 +1,6 @@
 include ActionView::Helpers::TextHelper
 class Activity < ActiveRecord::Base
-	belongs_to :user, dependent: :destroy
+	belongs_to :user
 
 	def total_time_spent_in_words
 		s_time = Time.parse(start_time.to_s)

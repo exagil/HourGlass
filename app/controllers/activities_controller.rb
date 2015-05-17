@@ -1,14 +1,14 @@
 class ActivitiesController < ApplicationController
 	include ActivitiesHelper
 	before_filter :redirect_to_root_if_not_logged_in
-	before_action :set_todays_activity
+	before_filter :redirect_to_root_if_not_admin, only: :dashboard
+	before_action :set_todays_activity, except: :dashboard
 
 	def index
-		@activities = current_user.activities.all
+		@activities = current_user.get_authorized_activities(user_id: params['user'])
 	end
 
 	def edit
-		
 	end
 
 	def update
@@ -19,6 +19,10 @@ class ActivitiesController < ApplicationController
 			format.html {redirect_to welcome_path}
 			format.js
 		end
+	end
+
+	def dashboard
+		@users = User.where(admin: false)
 	end
 
 	private

@@ -4,7 +4,12 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   def after_sign_in_path_for(resource)
-    welcome_path
+    # terenary operator doesn't work here - why?
+    if resource.try(:admin?)
+      return dashboard_path
+    else
+      return welcome_path
+    end
   end
 
   private
@@ -15,4 +20,8 @@ class ApplicationController < ActionController::Base
 	  def redirect_to_root_if_not_logged_in
 	  	redirect_to root_path unless signed_in?
 	  end
+
+    def redirect_to_root_if_not_admin
+      redirect_to root_path unless current_user.try(:admin?)
+    end
 end
