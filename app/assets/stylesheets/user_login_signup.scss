@@ -15,6 +15,11 @@
 				color: #7e7e7e; padding: 2.5em;
 
 				h2 { text-align: center; }
+
+				#error_explanation {
+					padding-left: 0.8em;
+					ul {list-style: none; color: #ed5757;}
+				}
 				
 				.form-control {
 					padding: 1.7em;
