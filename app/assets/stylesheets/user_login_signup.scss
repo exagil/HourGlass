@@ -1,0 +1,21 @@
+.user_login {
+	min-height: 100vh; min-width: 100vw;
+	background-color: #E89C9C;
+
+	.login-form {
+		background-color: #ECECEC;
+
+		h2 { text-align: center; }
+		.form-control {
+			padding: 1.7em;
+			border: 1px solid #d5d5d5;
+			display: block;
+			margin: 0px auto 5px auto;
+			color: #7e7e7e;
+			border-radius: 2px;
+		}
+		
+
+	}
+
+}

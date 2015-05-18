@@ -1,29 +1,23 @@
-<h2>Sign up</h2>
+<div class="user_sign_up">
+  <div class="form">
+      <%= form_for(:user, :url => registration_path(:user)) do |f| %>
+        <h2 class="hidden">Sign Up</h2>
+        <h2>New Here? Sign Up</h2>
+        <%= devise_error_messages! %>
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= devise_error_messages! %>
+        <%= f.text_field :email, class: 'input', placeholder: 'chi6rag@gmail.com' %>
+        <%= f.password_field :password, class: 'input', placeholder: 'Password', autocomplete: "off" %>
+        <%= f.password_field :password_confirmation, class: 'input', placeholder: 'Confirm Password', autocomplete: "off" %>
+        <%= f.submit "Sign Up", class: 'submit' %>
+      <% end %>
+      <div class="recovery-links">
+        <%- if devise_mapping.recoverable? && controller_name != 'passwords' && controller_name != 'registrations' %>
+          <%= link_to "Reset Password", new_password_path(resource_name), class: 'reset-password' %>
+        <% end -%>
+        <%- if devise_mapping.registerable? && controller_name != 'registrations' %>
+          <%= link_to "Sign up", new_registration_path(resource_name), class: 'signup-link' %>
+        <% end -%>
+      </div>
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password %>
-    <% if @validatable %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "off" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off" %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit "Sign up" %>
-  </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
+    </div>
+</div>

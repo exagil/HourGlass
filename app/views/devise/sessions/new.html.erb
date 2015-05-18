@@ -1,14 +1,41 @@
 <div class="user_login">
-  <div class="form">
-      <%= form_for(:user, :url => session_path(:user)) do |f| %>
+  
+  <div class="row">
+
+    <!-- div.login-form -->
+    <div class="login-form col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1">
+
+      <%= form_for(:user, :url => session_path(:user), html: {class: 'form-horizontal'}) do |f| %>
         <h2 class="hidden">Login</h2>
         <h2>Have an account? Sign in</h2>
-        <%= f.text_field :email, class: 'input', placeholder: 'Username' %>
-        <%= f.password_field :password, class: 'input', placeholder: 'Password' %>
-        <%= f.check_box :remember_me, class: 'check-box' %>
-        <%= f.label :remember_me %>
-        <%= f.submit "Login", class: 'submit' %>
+        <br />
+        <div class="form-group">
+          <div class="col-sm-10 col-sm-offset-1">
+            <%= f.text_field :email, class: 'form-control', placeholder: 'chi6rag@gmail.com' %>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-sm-10 col-sm-offset-1">
+            <%= f.password_field :password, class: 'form-control', placeholder: 'Password' %>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-sm-offset-1 col-sm-10">
+            <div class="checkbox">
+              <label>
+                <%= f.check_box :remember_me, class: 'check-box' %> Remember me
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-sm-10 col-sm-offset-1">
+            <button type="submit" class="btn btn-default">Login</button>
+          </div>
+        </div>
       <% end %>
+      
+      <!-- div.recovery-links -->
       <div class="recovery-links">
         <%- if devise_mapping.recoverable? && controller_name != 'passwords' && controller_name != 'registrations' %>
           <%= link_to "Reset Password", new_password_path(resource_name), class: 'reset-password' %>
@@ -17,6 +44,11 @@
           <%= link_to "Sign up", new_registration_path(resource_name), class: 'signup-link' %>
         <% end -%>
       </div>
+      <!-- /div.recovery-links -->
 
     </div>
+    <!-- /div.login-form -->
+
+  </div>
+
 </div>
