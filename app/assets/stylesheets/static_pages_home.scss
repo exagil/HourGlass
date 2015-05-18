@@ -1,33 +1,54 @@
-.space {height: 30vh;}
-
-.banner-image {
-	height: 100vh;
-	width: 100vw;
-	background: url(http://res.cloudinary.com/chi6rag/image/upload/v1431940402/HourGlass/clock_banner.jpg);
-	background-size: cover;
-	z-index: -10;
-	margin-left: 0px;
-}
-
-.banner-overlay {
-	z-index: 10;
-
-	.login-signup-tabbed-forms {
-		padding: 2em;
-		background: #FDFDFD;
-		padding-top: 0px;
+.static_pages_home {
+	background-color: #e89c9c;
+	margin: 0px;
+	color: #7e7e7e;
+	font-family: Roboto, Arial, sans-serif;
+	font-weight: 100;
+	position: relative;
+	top: -1.5em;
+	height: 100vh; width: 100vw;
+	
+	.form {
+		height: 400px; width: 600px;
+		background-color: #ececec;
+		margin: auto;
 		position: relative;
-		top: 50%;
-		transform: translate-Y(-50%);
-
-		.form-control {
-			margin-bottom: 1em;
-			margin-top: 1em;
-			border-radius: 2px;
-			padding: 1.5em;
-			border: 1px solid #E4D0AB;
-		}
-
+		top: 100px;
+		box-shadow: 1px 1px 10px  gray;
+	}
+	
+	form h2{
+		padding: 30px;
+		text-align: center;
+	}
+	
+	.hidden {
+		display: none;
+	}
+	
+	.input {
+		width: 72%;
+		padding: 17px;
+		border: 1px solid #d5d5d5;
+		display: block;
+		margin: 0px auto 5px auto;
+		color: #7e7e7e;
+	}
+	
+	.submit {
+		width: 22%;
+		padding: 12px; border: 0px; margin: 0px auto 5px auto;
+		display: block;
+		background-color: #9dd8d4;
+		color: white;
+		text-transform: uppercase;
+		margin-top: 30px;
+	}
+	
+	.check-box {
+		border: 1px solid #d5d5d5;
+		border-radius: none;
+		margin-left: 70px; margin-top: 30px;
 	}
 
 }
