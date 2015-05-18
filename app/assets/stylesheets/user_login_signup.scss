@@ -2,10 +2,15 @@
 	min-height: 100vh; min-width: 100vw;
 	background-color: #E89C9C;
 
+	.login-row { position: relative; top: 50%; }
+
+	/* .login-form */
 	.login-form {
 		background-color: #ECECEC;
+		color: #7e7e7e; padding-bottom: 1em;
 
 		h2 { text-align: center; }
+		
 		.form-control {
 			padding: 1.7em;
 			border: 1px solid #d5d5d5;
@@ -14,8 +19,31 @@
 			color: #7e7e7e;
 			border-radius: 2px;
 		}
+		.remember-me-label { font-size: 1.2em; position: relative; left: 6px; }
 		
+		.check-box { position: relative; top: 1px; }
+		
+		.login-button-row {
+			text-align: center;
+			button {
+				padding: 0.7em 2.5em 0.7em 2.5em;
+				border: 0px;
+				margin: 0px auto 5px auto;
+				display: block;
+				background-color: #9dd8d4;
+				color: white;
+				text-transform: uppercase;
+				border-radius: 2px;
+				/*margin-top: 30px;*/
+			}
+		}
+
+		.recovery-links>a {
+			color: #7e7e7e;
+			&:hover {text-decoration: none;}
+		}
 
 	}
+	/* .login-form */
 
 }
