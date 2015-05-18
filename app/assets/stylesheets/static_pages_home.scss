@@ -1,15 +1,16 @@
 .static_pages_home {
-	background-color: #e89c9c;
+	overflow-y: hidden;
+
+	background-color: #ECBFBF;
 	margin: 0px;
 	color: #7e7e7e;
 	font-family: Roboto, Arial, sans-serif;
 	font-weight: 100;
 	position: relative;
-	top: -1.5em;
 	height: 100vh; width: 100vw;
 	
 	.form {
-		height: 400px; width: 600px;
+		height: 375px; width: 600px;
 		background-color: #ececec;
 		margin: auto;
 		position: relative;
@@ -31,7 +32,7 @@
 		padding: 17px;
 		border: 1px solid #d5d5d5;
 		display: block;
-		margin: 0px auto 5px auto;
+		margin: 0px auto 1em auto;
 		color: #7e7e7e;
 	}
 	
@@ -39,16 +40,16 @@
 		width: 22%;
 		padding: 12px; border: 0px; margin: 0px auto 5px auto;
 		display: block;
-		background-color: #9dd8d4;
+		background-color: #74CFC8;
 		color: white;
+		font-weight: bold;
 		text-transform: uppercase;
-		margin-top: 30px;
 	}
 	
 	.check-box {
 		border: 1px solid #d5d5d5;
 		border-radius: none;
-		margin-left: 70px; margin-top: 30px;
+		margin-left: 90px; margin-top: 0.7em;
 	}
 
 }
