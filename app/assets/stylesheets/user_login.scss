@@ -1,4 +1,4 @@
-.static_pages_home {
+.user_login {
 	overflow-y: hidden;
 
 	background-color: #ECBFBF;
@@ -10,7 +10,7 @@
 	height: 100vh; width: 100vw;
 	
 	.form {
-		height: 375px; width: 600px;
+		height: 380px; width: 600px;
 		background-color: #ececec;
 		margin: auto;
 		position: relative;
@@ -53,7 +53,22 @@
 	}
 
 	.recovery-links {
-		text-align: center;
+		text-align: center; margin-top: 1.4em;
+
+		a.signup-link, a.reset-password {
+			font-size: 1em; color: #8B8686;
+			float: right; padding-right: 1.5em;
+			font-weight: bold;
+
+			&:hover { text-decoration: none; }
+
+		}
+
+		a.reset-password {
+			padding-left: 0px; padding-left: 1.5em;
+			float: left;
+		}
+
 	}
 
 }

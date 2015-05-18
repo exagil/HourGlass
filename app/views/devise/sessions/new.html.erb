@@ -1,4 +1,4 @@
-<div class="static_pages_home">
+<div class="user_login">
   <div class="form">
       <%= form_for(:user, :url => session_path(:user)) do |f| %>
         <h2 class="hidden">Login</h2>
@@ -9,15 +9,13 @@
         <%= f.label :remember_me %>
         <%= f.submit "Login", class: 'submit' %>
       <% end %>
-
       <div class="recovery-links">
-        <%- if devise_mapping.registerable? && controller_name != 'registrations' %>
-          <%= link_to "Sign up", new_registration_path(resource_name) %>
-        <% end -%>
-        &nbsp;
         <%- if devise_mapping.recoverable? && controller_name != 'passwords' && controller_name != 'registrations' %>
-          <%= link_to "Forgot your password?", new_password_path(resource_name) %>
-        <% end %>
+          <%= link_to "Reset Password", new_password_path(resource_name), class: 'reset-password' %>
+        <% end -%>
+        <%- if devise_mapping.registerable? && controller_name != 'registrations' %>
+          <%= link_to "Sign up", new_registration_path(resource_name), class: 'signup-link' %>
+        <% end -%>
       </div>
 
     </div>
