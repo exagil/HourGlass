@@ -2,3 +2,10 @@
 @import "bootstrap";
 @import "activities";
 @import "header";
+@import "static_pages_home";
+
+body {
+	font-family: 'Muli', sans-serif;
+	width: 100vw;
+	overflow-x: hidden;
+}

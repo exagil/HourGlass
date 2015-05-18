@@ -1,0 +1,31 @@
+.banner-image {
+	height: inherit;
+	width: inherit;
+	background: url(http://res.cloudinary.com/chi6rag/image/upload/v1431931815/HourGlass/clock_banner.png);
+	min-height: 400px;
+	background-size: cover;
+	z-index: -10;
+}
+
+.banner-overlay {
+	z-index: 10;
+
+	.login-signup-tabbed-forms {
+		padding: 2em;
+		background: #FDFDFD;
+		padding-top: 0px;
+		position: relative;
+		top: 50%;
+		transform: translate-Y(-50%);
+
+		.form-control {
+			margin-bottom: 1em;
+			margin-top: 1em;
+			border-radius: 2px;
+			padding: 1.5em;
+			border: 1px solid #E4D0AB;
+		}
+
+	}
+
+}
