@@ -1,26 +1,24 @@
-<h2>Log in</h2>
+<div class="static_pages_home">
+  <div class="form">
+      <%= form_for(:user, :url => session_path(:user)) do |f| %>
+        <h2 class="hidden">Login</h2>
+        <h2>Have an account? Sign in</h2>
+        <%= f.text_field :email, class: 'input', placeholder: 'Username' %>
+        <%= f.password_field :password, class: 'input', placeholder: 'Password' %>
+        <%= f.check_box :remember_me, class: 'check-box' %>
+        <%= f.label :remember_me %>
+        <%= f.submit "Login", class: 'submit' %>
+      <% end %>
 
-<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true %>
-  </div>
+      <div class="recovery-links">
+        <%- if devise_mapping.registerable? && controller_name != 'registrations' %>
+          <%= link_to "Sign up", new_registration_path(resource_name) %>
+        <% end -%>
+        &nbsp;
+        <%- if devise_mapping.recoverable? && controller_name != 'passwords' && controller_name != 'registrations' %>
+          <%= link_to "Forgot your password?", new_password_path(resource_name) %>
+        <% end %>
+      </div>
 
-  <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "off" %>
-  </div>
-
-  <% if devise_mapping.rememberable? -%>
-    <div class="field">
-      <%= f.check_box :remember_me %>
-      <%= f.label :remember_me %>
     </div>
-  <% end -%>
-
-  <div class="actions">
-    <%= f.submit "Log in" %>
-  </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
+</div>
