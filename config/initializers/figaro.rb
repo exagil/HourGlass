@@ -1,0 +1,1 @@
+Figaro.require_keys("ses_username", "ses_password")
