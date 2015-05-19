@@ -1,0 +1,22 @@
+<table class='activities_history'>
+	<tr>
+		<th>S.No.</th>
+		<th>Email</th>
+		<th>Date</th>
+		<th>Start Time</th>
+		<th>End Time</th>
+		<th>Total Time Spent</th>
+	</tr>
+<% index = 1 %>
+<% @activities.each do |activity| %>
+	<tr>
+		<td><%= index %></td>
+		<th><%= activity.user.email %></th>
+		<td><%= activity.created_at.strftime('%d %h %Y') %></td>
+		<td><%= activity.start_time.strftime('%I:%M %p') if activity.start_time %></td>
+		<td><%= activity.end_time.strftime('%I:%M %p') if activity.end_time %></td>
+		<td><%= activity.total_time_spent_in_words if(activity.start_time && activity.end_time) %></td>
+		<% index += 1 %>
+	</tr>
+<% end %>
+</table>

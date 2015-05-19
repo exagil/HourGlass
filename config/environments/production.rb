@@ -76,4 +76,16 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+
+  
+  config.action_mailer.default_url_options = { host: 'hourglass.herokuapp.com' }
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+      :address => "",
+      :user_name => ENV['SMTP_USERNAME'], # Your SMTP user here.
+      :password => ENV['SMTP_PWD'], # Your SMTP password here.
+      :authentication => :login,
+      :domain => 'heroku.com',
+      :enable_starttls_auto => true
+  }
 end

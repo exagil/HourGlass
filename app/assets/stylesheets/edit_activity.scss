@@ -1,0 +1,21 @@
+.edit-activity {
+	height: 100vh; width: 100vw;
+
+	/* .activities */
+	.activities {
+		position: relative; top: 10%;
+		text-align: center;
+		h2 { font-size: 5em; }
+	}
+	/* .activities */
+
+	.quote-banner {
+		h3 {font-size: 1.8em;}
+	}
+
+	.todays_time {
+		
+		button, input { padding: 0.7em; margin: 0.7em 0.2em 0.7em 0.2em; }
+	}
+
+}
