@@ -9,8 +9,9 @@
 	.navbar-brand {
 		font-family: 'Muli', sans-serif;
 		color: #e74c3c; font-size: 1.6em;
+		&:hover { color: #e74c3c;}
 	}
 
-	#right-collapse-section li a { font-size: 1.1em; }
+	#right-collapse-section li a { font-size: 1.1em; &:hover{ color: #777; } }
 
 }
