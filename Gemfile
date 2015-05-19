@@ -32,6 +32,7 @@ gem 'bootstrap-sass'
 gem 'unicorn'
 gem 'devise'
 gem 'font-awesome-sass'
+gem 'annotate'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
