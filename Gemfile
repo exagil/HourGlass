@@ -29,7 +29,6 @@ gem 'bootstrap-sass'
 # Use Unicorn as the app server
 gem 'unicorn'
 gem 'devise'
-gem 'font-awesome-sass'
 gem 'annotate'
 gem "figaro"
 
