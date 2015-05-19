@@ -1,6 +1,10 @@
 <div class="activities_index">
 	<%= render partial: 'shared/header' %>
-	<h2>Here's what you did last week</h2>
+	<% if current_user.try(:admin?) %>
+		<h2>Here's <%= @user.name.gsub(/\s.*/, '') %>'s attendance report</h2>
+	<% else %>
+		<h2>Here's what you did last in the last 7 days</h2>
+	<% end %>
 	<table class='activities_history'>
 		<tr>
 			<th>S.No.</th>

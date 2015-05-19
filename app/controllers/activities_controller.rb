@@ -6,6 +6,7 @@ class ActivitiesController < ApplicationController
 
 	def index
 		@activities = current_user.get_authorized_activities(user_id: params['user'])
+		@user = User.find_by(params['user'])
 	end
 
 	def edit
