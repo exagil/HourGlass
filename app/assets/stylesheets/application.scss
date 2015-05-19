@@ -1,10 +1,10 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
-@import "activities";
 @import "header";
 @import "user_login_signup";
 @import "static_pages_home";
 @import "edit_activity";
+@import "activities_index";
 
 body {
 	font-family: 'Muli', sans-serif;

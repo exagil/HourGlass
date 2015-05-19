@@ -16,7 +16,7 @@ class User < ActiveRecord::Base
   	elsif try(:admin?) && params[:user_id] != nil
   		return Activity.where(user_id: params[:user_id])
   	else
-  		return activities
+  		return activities.limit(14)
   	end
   end
 end

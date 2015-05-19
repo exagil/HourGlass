@@ -8,4 +8,5 @@ $(document).ready(function(){
 		'step': 15
 	});
 	$('#activity_start_time, #activity_end_time').timepicker('setTime', new Date());
+	
 });
