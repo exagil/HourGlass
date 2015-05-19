@@ -1,15 +1,18 @@
-<div class="activities">
-	<h1><%= @todays_activity.created_at.strftime('%A, %d %B, %Y') %></h1>
+<div class="edit-activity">
+	<%= render partial: 'shared/header' %>
+	<div class="activities">
+		<h2><%= @todays_activity.created_at.strftime('%A, %d %B, %Y') %></h2>
+		<% if @todays_activity.start_time == nil %>
+			<%= render partial: 'activities/start_form' %>
+		<% elsif @todays_activity.end_time == nil %>
+			<%= render partial: 'activities/end_form' %>
+		<% else %>
+		  <%= render partial: 'activities/result' %>
+		<% end %>
+	</div>
+	<nav class="navbar navbar-default navbar-fixed-bottom">
+  <div class="container">
+    <%= link_to 'Show History' %>
+  </div>
+</nav>
 </div>
-
-<% if @todays_activity.start_time == nil %>
-	<%= render partial: 'activities/start_form' %>
-<% elsif @todays_activity.end_time == nil %>
-	<%= render partial: 'activities/end_form' %>
-<% else %>
-  <%= render partial: 'activities/result' %>
-<% end %>
-
-<footer>
-	<%= link_to "History", history_path %>
-</footer>

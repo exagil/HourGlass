@@ -38,9 +38,15 @@
         
         <!-- div.recovery-links -->
         <div class="recovery-links">
+        
         <%- if controller_name != 'sessions' %>
-          <%= link_to "Log in", new_session_path(resource_name), class: 'signup-link pull-left' %><br />
+          <%= link_to "Have an account? Log In", new_session_path(resource_name), class: 'signup-link pull-left' %>
         <% end -%>
+
+        <%- if devise_mapping.confirmable? && controller_name != 'confirmations' %>
+          <%= link_to "Send confirmation instructions", new_confirmation_path(resource_name), class: 'pull-right' %>
+        <% end -%>
+        
         </div>
         <!-- /div.recovery-links -->
 
