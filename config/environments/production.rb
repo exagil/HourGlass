@@ -81,9 +81,9 @@ Rails.application.configure do
   config.action_mailer.default_url_options = { host: 'hourglass.herokuapp.com' }
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
-      :address => "",
-      :user_name => ENV['ses_username'], # Your SMTP user here.
-      :password => ENV['ses_password'], # Your SMTP password here.
+      :address => "email-smtp.us-east-1.amazonaws.com",
+      :user_name => ENV['ses_username'],
+      :password => ENV['ses_password'],
       :authentication => :login,
       :domain => 'heroku.com',
       :enable_starttls_auto => true
