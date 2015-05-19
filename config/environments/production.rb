@@ -82,8 +82,8 @@ Rails.application.configure do
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
       :address => "",
-      :user_name => ENV['SMTP_USERNAME'], # Your SMTP user here.
-      :password => ENV['SMTP_PWD'], # Your SMTP password here.
+      :user_name => ENV['ses_username'], # Your SMTP user here.
+      :password => ENV['ses_password'], # Your SMTP password here.
       :authentication => :login,
       :domain => 'heroku.com',
       :enable_starttls_auto => true
