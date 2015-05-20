@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  devise_for :users, :path => '', :path_names => {:sign_in => 'login', :sign_out => 'logout', :sign_up => 'signup'}, controllers: { confirmations: 'confirmations' }
+  devise_for :users, :path => '', :path_names => {:sign_in => 'login', :sign_out => 'logout', :sign_up => 'signup'}
   resources :users, only: :destroy
   get 'welcome' => 'activities#edit'
   get 'dashboard' => 'activities#dashboard'
