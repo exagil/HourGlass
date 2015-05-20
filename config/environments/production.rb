@@ -22,7 +22,7 @@ Rails.application.configure do
 
   # Disable serving static files from the `/public` folder by default since
   # Apache or NGINX already handles this.
-  config.serve_static_files = ENV['RAILS_SERVE_STATIC_FILES'].present?
+  config.serve_static_files = true
 
   # Compress JavaScripts and CSS.
   config.assets.js_compressor = :uglifier
@@ -81,9 +81,9 @@ Rails.application.configure do
   config.action_mailer.default_url_options = { host: 'hourglass.herokuapp.com' }
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
-      :address => "",
-      :user_name => ENV['SMTP_USERNAME'], # Your SMTP user here.
-      :password => ENV['SMTP_PWD'], # Your SMTP password here.
+      :address => "email-smtp.us-east-1.amazonaws.com",
+      :user_name => ENV['ses_username'],
+      :password => ENV['ses_password'],
       :authentication => :login,
       :domain => 'heroku.com',
       :enable_starttls_auto => true

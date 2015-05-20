@@ -1,16 +1,24 @@
-<table class='activities_history'>
-	<% index = 1 %>
-	<th>S.No</th>
-	<th>Email</th>
-	<th>Show History</th>
-	<th>Delete</th>
-	<% @users.each do |user| %>
-		<tr>
-			<td><%= index %></td>
-			<td><%= user.email %></td>
-			<td><%= link_to "Show History", activities_path(user: user) %></td>
-			<td><%= link_to "Delete", user_path(user), method: :delete, data: {confirm: "Are you sure?"} %></td>
-		</tr>
-		<% index += 1 %>
+<div class="activities_index">
+	<%= render partial: 'shared/header' %>
+	<% unless @users.blank? %>
+		<table class='activities_history'>
+			<h2>Here's the list of students</h2>
+			<% index = 1 %>
+			<th>S.No</th>
+			<th>Name</th>
+			<th>View Report</th>
+			<th>Delete</th>
+			<% @users.each do |user| %>
+				<tr>
+					<td><%= index %></td>
+					<td><%= user.name %></td>
+					<td><%= link_to "View Report", activities_path(user: user) %></td>
+					<td><%= link_to "Delete", user_path(user), method: :delete, data: {confirm: "Are you sure?"} %></td>
+				</tr>
+				<% index += 1 %>
+			<% end %>
+		</table>
+	<% else %>
+		<h3 class='no-students-quote'>Oops, seems like nobody has registered</h3>
 	<% end %>
-</table>
+</div>

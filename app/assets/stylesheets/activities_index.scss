@@ -1,0 +1,26 @@
+.activities_index {
+	text-align: center;
+	min-height: 100vh; width: 100vw;
+	background: #F8F8F8;
+	
+	h2 { color: #26AFAE; font-size: 2.5em; }
+
+	/* .activities_history */
+	.activities_history {
+		margin: 2em auto;
+		border: 1px solid rgb(226, 226, 226);
+		color: dimgrey;
+
+		td, tr, th {
+			border: 1px solid rgb(226, 226, 226);
+			padding: 1em;
+	  }
+	  th { background-color: #F0EFFF; }
+	  tr { &:hover {background-color: rgb(249, 244, 244);} }
+
+	}
+	/* /.activities_history */
+
+	.no-students-quote { color: #84CA84; }
+
+}
