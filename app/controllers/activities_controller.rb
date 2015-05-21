@@ -14,8 +14,7 @@ class ActivitiesController < ApplicationController
 
 	def update
 		@todays_activity = current_user.todays_activity
-		updated_activity = convert_to_24_hours(params_activity)
-		@todays_activity.update(updated_activity)
+		@todays_activity.update(convert_to_24_hours(params_activity))
 		respond_to do |format|
 			format.html {redirect_to welcome_path}
 			format.js
