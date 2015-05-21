@@ -1,7 +1,7 @@
 class ActivitiesController < ApplicationController
 	include ActivitiesHelper
-	before_filter :redirect_to_root_if_not_logged_in
-	before_filter :redirect_to_root_if_not_admin, only: :dashboard
+	before_filter :authenticate_user
+	before_filter :authenticate_admin, only: :dashboard
 	before_action :set_todays_activity, except: :dashboard
 
 	def index

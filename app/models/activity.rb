@@ -15,7 +15,7 @@ class Activity < ActiveRecord::Base
 	belongs_to :user
 
 	validate :end_time_cannot_be_in_future, on: :update
-	validate :start_time_cannot_be_in_future, on: :update
+	validate :end_time_cannot_be_less_than_start_time, on: :update
 
 	def total_time_spent_in_words
 		s_time = Time.parse(start_time.to_s)
@@ -31,16 +31,17 @@ class Activity < ActiveRecord::Base
 	end
 
 	private
-		def start_time_cannot_be_in_future
-			if self.start_time != nil && self.start_time > DateTime.now.change(:offset => "+0000")
-				errors.add(:start_time, "You cannot set a Check In time in future")
-				self.start_time = nil
-			end
-		end
 
 		def end_time_cannot_be_in_future
 			if self.end_time != nil && self.end_time > DateTime.now.change(:offset => "+0000")
 				errors.add(:end_time, "You cannot set a Check Out time in future")
+				self.end_time = nil 
+			end
+		end
+		
+		def end_time_cannot_be_less_than_start_time
+			if self.end_time != nil && self.start_time != nil && self.end_time < self.start_time
+				errors.add(:end_time, "You cannot Check Out before you Check In: Come On! Be practical")
 				self.end_time = nil
 			end
 		end
