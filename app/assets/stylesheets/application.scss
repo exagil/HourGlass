@@ -1,3 +1,5 @@
+@import 'common';
+@import 'theme';
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "header";
@@ -5,8 +7,3 @@
 @import "static_pages_home";
 @import "edit_activity";
 @import "activities_index";
-
-body {
-	font-family: 'Muli', sans-serif;
-	overflow-x: hidden;
-}
