@@ -3,6 +3,7 @@
   width: 100vw;
   background: $hourglass_gray_light;
   font-family: 'Muli', sans-serif;
+
   /* .activities */
   .activities {
     position: relative;
@@ -15,34 +16,40 @@
     }
   }
   /* .activities */
+
   .quote-banner {
     h3 {
       font-size: 2em;
-      color: #26A55B;
+      color: $hourglass_green_dark;
     }
   }
+
   .errors {
     color: red;
   }
+
   .todays_time {
     input {
       padding: 0.7em;
       border: 1px solid lightgrey;
       margin: 0.7em 0.2em 0.7em 0.2em;
     }
+
     input[type='submit'].checkin,
     input[type='submit'].checkout {
-      background: #69E09C;
+      background: $hourglass_green;
       padding-right: 2em;
       padding-left: 2em;
-      border: 2px solid #69E09C;
+      border: 2px solid $hourglass_green;
       color: white;
       font-weight: bold;
       text-transform: uppercase;
     }
+
     input[type='submit'].checkout {
-      border: 2px solid #E56A5D;
-      background: #E56A5D;
+      border: 2px solid $hourglass_red;
+      background: $hourglass_red;
     }
   }
+
 }

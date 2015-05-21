@@ -1,4 +1,5 @@
 .activities_index {
+  font-family: 'Muli', sans-serif;
   text-align: center;
   min-height: 100vh;
   width: 100vw;
@@ -7,26 +8,31 @@
     color: #26AFAE;
     font-size: 2.5em;
   }
+
   /* .activities_history */
   .activities_history {
     margin: 2em auto;
-    border: 1px solid rgb(226, 226, 226);
     color: dimgrey;
+
     td, tr, th {
-      border: 1px solid rgb(226, 226, 226);
+      border: 1px solid $hourglass_gray_medium;
       padding: 1em;
     }
+
     th {
-      background-color: #F0EFFF;
+      background-color: $hourglass_gray;
     }
+
     tr {
       &:hover {
-        background-color: rgb(249, 244, 244);
+        background-color: $hourglass_pink_very_light;
       }
+
     }
   }
+
   /* /.activities_history */
   .no-students-quote {
-    color: #84CA84;
+    color: $hourglass_green;
   }
 }

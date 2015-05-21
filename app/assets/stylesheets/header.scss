@@ -12,13 +12,14 @@
     color: $hourglass_red;
     font-size: 1.6em;
     &:hover {
-      color: initial;
+      color: $hourglass_red;
     }
   }
   #right-collapse-section li a {
     font-size: 1.1em;
+    color: $hourglass_gray_very_dark;
     &:hover {
-      color: $hourglass_gray;
+      color: $hourglass_gray_very_dark;
     }
   }
 }

@@ -12,6 +12,7 @@
       text-align: center;
       font-size: 10vmin;
     }
+    
     /* .action-buttons */
     .action-buttons {
       text-align: center;
@@ -21,7 +22,6 @@
         border-radius: 2px;
         margin: 0.5em;
         margin-top: 1em;
-        background: rgb(134, 202, 134);
         color: white;
         font-size: 2.8vmin;
         display: inline-block;
@@ -29,12 +29,15 @@
           text-decoration: none;
         }
       }
+      
       .login-button {
         background: $hourglass_pink;
       }
+      
       .signup-button {
         background: $hourglass_green;
       }
+      
     }
     /* /.action-buttons */
   }
