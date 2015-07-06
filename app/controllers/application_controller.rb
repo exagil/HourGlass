@@ -23,11 +23,11 @@ class ApplicationController < ActionController::Base
   		redirect_to welcome_path if user_signed_in?
 	  end
 
-	  def redirect_to_root_if_not_logged_in
+	  def authenticate_user
 	  	redirect_to root_path unless signed_in?
 	  end
 
-    def redirect_to_root_if_not_admin
+    def authenticate_admin
       redirect_to root_path unless current_user.try(:admin?)
     end
 end

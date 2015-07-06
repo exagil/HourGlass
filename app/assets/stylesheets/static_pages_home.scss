@@ -1,41 +1,44 @@
 .static_pages_home {
-	height: 100vh; width: 100vw;
-	background: #F0F0F0;
-
-	.row {
-		position: relative; top: 45%;
-		transform: translateY(-50%);
-		h2 {
-			font-family: 'Arvo', sans-serif;
-			color: #ff8d7a; text-align: center;
-			font-size: 5em;
-		}
-		
-		/* .action-buttons */
-		.action-buttons {
-			text-align: center;
-
-			.button {
-				padding: 1em 2em 1em 2em;
-				border: 0px solid transparent;
-				border-radius: 2px;
-				margin: 0.5em; margin-top: 1em;
-				background: rgb(134, 202, 134);
-				color: white;
-				font-size: 1.2em;
-				display: inline-block;
-
-				&:hover { text-decoration: none; }
-
-			}
-
-			.login-button { background: #FF8D7A; }
-			.signup-button {background: #84CA84; }
-
-		}
-		/* /.action-buttons */
-
-	}
-
-
+  height: 100vh;
+  width: 100vw;
+  background: $hourglass_gray;
+  .row {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    h2 {
+      font-family: 'Arvo', sans-serif;
+      color: #ff8d7a;
+      text-align: center;
+      font-size: 10vmin;
+    }
+    
+    /* .action-buttons */
+    .action-buttons {
+      text-align: center;
+      .button {
+        padding: 1em 2em 1em 2em;
+        border: 0px solid transparent;
+        border-radius: 2px;
+        margin: 0.5em;
+        margin-top: 1em;
+        color: white;
+        font-size: 2.8vmin;
+        display: inline-block;
+        &:hover {
+          text-decoration: none;
+        }
+      }
+      
+      .login-button {
+        background: $hourglass_pink;
+      }
+      
+      .signup-button {
+        background: $hourglass_green;
+      }
+      
+    }
+    /* /.action-buttons */
+  }
 }

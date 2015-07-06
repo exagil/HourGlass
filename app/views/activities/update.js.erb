@@ -1,4 +1,3 @@
-console.log("Loaded Update.js.erb");
 <% if @todays_activity.start_time == nil %>
   $('.time_form').replaceWith("<%= escape_javascript(render partial: 'activities/start_form') %>");
   $('#activity_start_time, #activity_end_time').timepicker({
@@ -9,6 +8,7 @@ console.log("Loaded Update.js.erb");
 		'timeFormat': 'h:i:A',
 		'step': 15
 	});
+	$('#activity_start_time, #activity_end_time').timepicker('setTime', new Date());
 <% elsif @todays_activity.end_time == nil %>
   $('.time_form').replaceWith("<%= escape_javascript(render partial: 'activities/end_form') %>");
   $('#activity_start_time, #activity_end_time').timepicker({

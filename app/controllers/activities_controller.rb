@@ -1,7 +1,7 @@
 class ActivitiesController < ApplicationController
 	include ActivitiesHelper
-	before_filter :redirect_to_root_if_not_logged_in
-	before_filter :redirect_to_root_if_not_admin, only: :dashboard
+	before_filter :authenticate_user
+	before_filter :authenticate_admin, only: :dashboard
 	before_action :set_todays_activity, except: :dashboard
 
 	def index
@@ -14,8 +14,7 @@ class ActivitiesController < ApplicationController
 
 	def update
 		@todays_activity = current_user.todays_activity
-		updated_activity = convert_to_24_hours(params_activity)
-		@todays_activity.update(updated_activity)
+		@todays_activity.update(convert_to_24_hours(params_activity))
 		respond_to do |format|
 			format.html {redirect_to welcome_path}
 			format.js

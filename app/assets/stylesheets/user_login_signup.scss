@@ -1,63 +1,74 @@
 /*.user_login */
-.user_login, .user_sign_up{
-	background-color: #FDB3A7;
-	height: 100vh; width: 100vw;
-
-	.login-row { height: 100%;
-		.container-fluid {
-			position: relative;
-			top: 50%;
-			transform: translateY(-50%);
-		
-			/* .login-form */
-			.login-form {
-				background-color: #ECECEC;
-				color: #7e7e7e; padding: 2.5em;
-
-				h2 { text-align: center; }
-
-				#error_explanation {
-					padding-left: 0.8em;
-					ul {list-style: none; color: #ed5757;}
-				}
-				
-				.form-control {
-					padding: 1.7em;
-					border: 1px solid #BABABA;
-					display: block;
-					margin: 0px auto 5px auto;
-					color: #515151;
-					border-radius: 2px;
-				}
-				.remember-me-label { font-size: 1.2em; position: relative; left: 6px; }
-				
-				.check-box { position: relative; top: 1px; }
-				
-				.login-button-row {
-					text-align: center;
-					button {
-						padding: 0.7em 2.5em 0.7em 2.5em;
-						border: 0px;
-						margin: 0px auto 5px auto;
-						display: block;
-						background-color: #9DD8D4;
-						color: white;
-						text-transform: uppercase;
-						border-radius: 2px;
-						/*margin-top: 30px;*/
-					}
-				}
-
-				.recovery-links>a {
-					color: #7e7e7e;
-					&:hover {text-decoration: none;}
-				}
-
-			}
-			/* .login-form */
-
-		}
-	}
+.user_login, .user_sign_up {
+  background-color: $hourglass_pink_light;
+  height: 100vh;
+  width: 100vw;
+  font-family: 'Muli', sans-serif;
+  
+  /* .login-row */
+  .login-row {
+    height: 100%;
+    .container-fluid {
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+      /* .login-form */
+      .login-form {
+        background-color: $hourglass_gray;
+        color: grey;
+        padding: 2.5em;
+        h2 {
+          text-align: center;
+        }
+        #error_explanation {
+          padding-left: 0.8em;
+          ul {
+            list-style: none;
+            color: $hourglass_red;
+          }
+        }
+        .form-control {
+          padding: 1.7em;
+          border: 1px solid $hourglass_gray_dark;
+          display: block;
+          margin: 0px auto 5px auto;
+          color: #515151;
+          border-radius: 2px;
+        }
+        .remember-me-label {
+          font-size: 1.2em;
+          position: relative;
+          left: 6px;
+        }
+        .check-box {
+          position: relative;
+          top: 1px;
+        }
+        .login-button-row {
+          text-align: center;
+          button {
+            padding: 0.7em 2.5em 0.7em 2.5em;
+            border: 0px;
+            margin: 0px auto 5px auto;
+            display: block;
+            background-color: $hourglass_hospital_green;
+            color: white;
+            text-transform: uppercase;
+            border-radius: 2px;
+          }
+        }
+        .recovery-links > a {
+          color: $hourglass_gray_very_dark;
+          &:hover {
+            text-decoration: none;
+          }
+        }
+      }
+      /* .login-form */
+    }
+  }
+  /* /.login-row */
 
 }
+
 /* /.user_login */

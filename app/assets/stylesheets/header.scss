@@ -1,17 +1,25 @@
 .shared-navbar {
-	margin-bottom: 0px;
-	border: 0px; height: 15vh;
-
-	.container-main {
-		position: relative; top: 50%; transform: translateY(-50%);
-	}
-
-	.navbar-brand {
-		font-family: 'Muli', sans-serif;
-		color: #e74c3c; font-size: 1.6em;
-		&:hover { color: #e74c3c;}
-	}
-
-	#right-collapse-section li a { font-size: 1.1em; &:hover{ color: #777; } }
-
+  margin-bottom: 0px;
+  border: 0px;
+  height: 15vh;
+  .container-main {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .navbar-brand {
+    font-family: 'Muli', sans-serif;
+    color: $hourglass_red;
+    font-size: 1.6em;
+    &:hover {
+      color: $hourglass_red;
+    }
+  }
+  #right-collapse-section li a {
+    font-size: 1.1em;
+    color: $hourglass_gray_very_dark;
+    &:hover {
+      color: $hourglass_gray_very_dark;
+    }
+  }
 }
